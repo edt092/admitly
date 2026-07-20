@@ -26,22 +26,34 @@ export function AdsterraAd({ format, className = "" }: { format: AdFormat; class
     const host = hostRef.current;
     if (!host) return;
     const frame = document.createElement("iframe");
+    let injected = false;
+
+    const injectAd = () => {
+      if (injected) return;
+      const doc = frame.contentDocument;
+      if (!doc) return;
+      injected = true;
+      doc.open();
+      doc.write(isNative ? nativeDocument : bannerDocument(format));
+      doc.close();
+    };
+
     frame.title = `${format} advertisement`;
     frame.width = String(dimensions?.width ?? "100%");
     frame.height = String(dimensions?.height ?? 180);
-    frame.loading = "lazy";
     frame.scrolling = isNative ? "auto" : "no";
     frame.referrerPolicy = "strict-origin-when-cross-origin";
     frame.setAttribute("sandbox", "allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox");
     frame.className = "block max-w-full border-0";
+    frame.addEventListener("load", injectAd, { once: true });
+    frame.src = "about:blank";
     host.appendChild(frame);
-    const doc = frame.contentDocument;
-    if (doc) {
-      doc.open();
-      doc.write(isNative ? nativeDocument : bannerDocument(format));
-      doc.close();
-    }
-    return () => frame.remove();
+    injectAd();
+
+    return () => {
+      frame.removeEventListener("load", injectAd);
+      frame.remove();
+    };
   }, [dimensions?.height, dimensions?.width, format, isNative]);
 
   return <aside className={`adsterra-slot ${className}`} aria-label="Advertisement" data-adsterra-format={format}>

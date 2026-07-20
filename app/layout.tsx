@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Admitly — College planning without the panic",
     description: "Explore colleges, compare schools and calculate your chances.",
-    images: [{ url: "/og.png", width: 1536, height: 804, alt: "Admitly college planning tools" }],
+    images: [{ url: "/og-colleges.png", width: 1536, height: 804, alt: "Admitly — 60 college profiles" }],
   },
-  twitter: { card: "summary_large_image", images: ["/og.png"] },
+  twitter: { card: "summary_large_image", images: ["/og-colleges.png"] },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

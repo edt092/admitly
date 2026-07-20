@@ -12,6 +12,7 @@ export type University = {
   tuition: number;
   enrollment: string;
   type: "Private" | "Public";
+  testBlind?: boolean;
 };
 
 export type CalculatorData = {

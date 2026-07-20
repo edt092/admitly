@@ -1,0 +1,16 @@
+export const universityDomains: Record<string, string> = {
+  harvard: "harvard.edu", stanford: "stanford.edu", mit: "mit.edu", nyu: "nyu.edu", ucla: "ucla.edu",
+  umich: "umich.edu", "uc-davis": "ucdavis.edu", "ohio-state": "osu.edu", purdue: "purdue.edu",
+  asu: "asu.edu", "penn-state": "psu.edu", ucf: "ucf.edu", yale: "yale.edu", princeton: "princeton.edu",
+  columbia: "columbia.edu", upenn: "upenn.edu", brown: "brown.edu", dartmouth: "dartmouth.edu",
+  cornell: "cornell.edu", duke: "duke.edu", northwestern: "northwestern.edu", "johns-hopkins": "jhu.edu",
+  vanderbilt: "vanderbilt.edu", rice: "rice.edu", washu: "wustl.edu", "notre-dame": "nd.edu",
+  georgetown: "georgetown.edu", usc: "usc.edu", "uc-berkeley": "berkeley.edu", ucsd: "ucsd.edu",
+  "uc-irvine": "uci.edu", ucsb: "ucsb.edu", "uw-seattle": "washington.edu", "ut-austin": "utexas.edu",
+  "georgia-tech": "gatech.edu", unc: "unc.edu", uva: "virginia.edu", uf: "ufl.edu", fsu: "fsu.edu",
+  miami: "miami.edu", "boston-u": "bu.edu", northeastern: "northeastern.edu", tufts: "tufts.edu",
+  "boston-college": "bc.edu", rochester: "rochester.edu", "case-western": "case.edu", tulane: "tulane.edu",
+  wisconsin: "wisc.edu", uiuc: "illinois.edu", maryland: "umd.edu", rutgers: "rutgers.edu", uconn: "uconn.edu",
+  "virginia-tech": "vt.edu", "texas-am": "tamu.edu", indiana: "iu.edu", "michigan-state": "msu.edu",
+  colorado: "colorado.edu", oregon: "uoregon.edu", alabama: "ua.edu", auburn: "auburn.edu",
+};

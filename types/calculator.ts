@@ -6,6 +6,12 @@ export type University = {
   location: string;
   prestige: number;
   accent: string;
+  acceptanceRate: number;
+  avgGpa: number;
+  avgSat: number;
+  tuition: number;
+  enrollment: string;
+  type: "Private" | "Public";
 };
 
 export type CalculatorData = {

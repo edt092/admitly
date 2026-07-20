@@ -13,8 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Admitly — College Acceptance Chance Calculator",
-  description: "Estimate your college acceptance chances in seconds.",
+  title: "Admitly — College planning without the panic",
+  description: "Explore colleges, compare schools, use free admissions tools and estimate your college acceptance chances.",
+  openGraph: {
+    title: "Admitly — College planning without the panic",
+    description: "Explore colleges, compare schools and calculate your chances.",
+    images: [{ url: "/og.png", width: 1536, height: 804, alt: "Admitly college planning tools" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/og.png"] },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

@@ -1,0 +1,2 @@
+import { CollegeCompare } from "@/components/CollegeCompare";import { PageIntro,SiteShell } from "@/components/SiteShell";
+export default function ComparePage(){return <SiteShell><main className="mx-auto max-w-5xl px-5 py-16 sm:px-8"><PageIntro eyebrow="College comparison" title="Two schools. One clearer decision." copy="Compare selectivity, academic profiles, cost and campus size side by side."/><CollegeCompare/></main></SiteShell>}
